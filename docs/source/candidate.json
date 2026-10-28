@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Grok Bot 多岗流水线",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "output": ".archify/architecture-grok-pipeline-20261028-132200/grok-bot-pipeline.html"
+  },
+  "components": [
+    {
+      "id": "owner",
+      "type": "external",
+      "icon": "person",
+      "label": "主人",
+      "sublabel": "人侧签名",
+      "pos": [24, 238],
+      "size": [150, 80]
+    },
+    {
+      "id": "steward",
+      "type": "backend",
+      "icon": "briefcase",
+      "label": "管家",
+      "sublabel": "编排，不代签",
+      "pos": [270, 228],
+      "size": [210, 100]
+    },
+    {
+      "id": "memory",
+      "type": "database",
+      "icon": "database",
+      "label": "工程记忆",
+      "sublabel": "SAVENOW 体系",
+      "pos": [195, 36],
+      "size": [170, 76]
+    },
+    {
+      "id": "room",
+      "type": "messagebus",
+      "icon": "messagebus",
+      "label": "协作群",
+      "sublabel": "只通知不拍板",
+      "pos": [385, 36],
+      "size": [170, 76]
+    },
+    {
+      "id": "scout",
+      "type": "backend",
+      "icon": "flag",
+      "label": "发现",
+      "sublabel": "社交与新盘",
+      "pos": [640, 238],
+      "size": [170, 80]
+    },
+    {
+      "id": "review",
+      "type": "security",
+      "icon": "decision",
+      "label": "研究",
+      "sublabel": "三态裁决",
+      "pos": [990, 238],
+      "size": [184, 80]
+    },
+    {
+      "id": "sentinel",
+      "type": "backend",
+      "icon": "clock",
+      "label": "持仓",
+      "sublabel": "不自己卖",
+      "pos": [1360, 242],
+      "size": [168, 72]
+    },
+    {
+      "id": "runner",
+      "type": "backend",
+      "icon": "active",
+      "label": "执行",
+      "sublabel": "唯一执刀",
+      "pos": [990, 460],
+      "size": [184, 80]
+    },
+    {
+      "id": "acctA",
+      "type": "security",
+      "icon": "security",
+      "label": "账户1",
+      "sublabel": "只读复核",
+      "pos": [914, 680],
+      "size": [156, 72]
+    },
+    {
+      "id": "acctB",
+      "type": "security",
+      "icon": "security",
+      "label": "账户2",
+      "sublabel": "只读复核",
+      "pos": [1094, 680],
+      "size": [156, 72]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "专岗流水线",
+      "wraps": ["scout", "review", "runner", "sentinel", "acctA", "acctB"],
+      "pad": 26
+    },
+    {
+      "kind": "security-group",
+      "label": "只读账户 · 不收私钥",
+      "wraps": ["acctA", "acctB"],
+      "pad": 14
+    }
+  ],
+  "connections": [
+    {
+      "id": "owner-to-steward",
+      "from": "owner",
+      "to": "steward",
+      "label": "1:1 确认",
+      "variant": "security"
+    },
+    {
+      "id": "steward-to-memory",
+      "from": "steward",
+      "to": "memory",
+      "label": "写入真相",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "steward-to-room",
+      "from": "steward",
+      "to": "room",
+      "label": "转发回执",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "steward-to-scout",
+      "from": "steward",
+      "to": "scout",
+      "label": "下发任务"
+    },
+    {
+      "id": "scout-to-review",
+      "from": "scout",
+      "to": "review",
+      "label": "候选与来源",
+      "variant": "emphasis"
+    },
+    {
+      "id": "review-to-runner",
+      "from": "review",
+      "to": "runner",
+      "label": "可参与才放行",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "sentinel-to-review",
+      "from": "sentinel",
+      "to": "review",
+      "label": "建议卖出",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "runner-to-acctA",
+      "from": "runner",
+      "to": "acctA",
+      "label": "复核",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "runner-to-acctB",
+      "from": "runner",
+      "to": "acctB",
+      "label": "复核",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "review-to-steward",
+      "from": "review",
+      "to": "steward",
+      "label": "否决上交",
+      "variant": "security",
+      "fromSide": "top",
+      "toSide": "top"
+    },
+    {
+      "id": "runner-to-steward",
+      "from": "runner",
+      "to": "steward",
+      "label": "超限上交",
+      "variant": "security",
+      "fromSide": "left",
+      "toSide": "bottom"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "人门",
+      "items": [
+        "拍板只在主人与管家的 1:1",
+        "协作群只收通知和回执",
+        "单项人门不喊整组停"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "放行",
+      "items": [
+        "研究只有可参与、暂不参与、信息不足",
+        "可参与才进入执行",
+        "步骤包标明账户1、账户2或双开"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "硬边界",
+      "items": [
+        "私钥和助记词永不进 Bot",
+        "账户岗不代签",
+        "持仓岗不自己执行"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "记忆",
+      "items": [
+        "真相写在 SAVENOW，不写在聊天里",
+        "旧待办不是新授权",
+        "样例阈值 N 要改成自己的数字"
+      ]
+    }
+  ]
+}
