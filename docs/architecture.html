@@ -5202,7 +5202,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
     <!-- Main Diagram -->
     <div class="diagram-container" data-detail-level="read"
          data-preset-badge-editorial-plate="ARCHIFY / 图版 04">
-      <svg viewBox="0 0 1594 840" role="img" lang="zh-CN" aria-labelledby="archify-diagram-title archify-diagram-description" data-animation="trace" data-preset="classic" data-quality-profile="showcase" data-node-ui="" data-reader-fit="intrinsic-height" data-reader-min-text="7.5" data-reader-primary-text="14">
+      <svg viewBox="0 0 1594 844" role="img" lang="zh-CN" aria-labelledby="archify-diagram-title archify-diagram-description" data-animation="trace" data-preset="classic" data-quality-profile="showcase" data-node-ui="" data-reader-fit="intrinsic-height" data-reader-min-text="7.5" data-reader-primary-text="14">
         <title id="archify-diagram-title">Grok Bot 多岗流水线</title>
         <desc id="archify-diagram-description">由 Archify 生成的架构图。</desc>
         <!-- Definitions -->
@@ -5249,9 +5249,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <rect width="100%" height="100%" fill="url(#grid)" />
 
         <!-- Boundaries (behind everything) -->
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="0" data-composition-frame-label="专岗流水线" x="614" y="212" width="940" height="560" rx="12" class="c-region" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="0" data-composition-frame-label="专岗流水线" x="614" y="212" width="940" height="564" rx="12" class="c-region" stroke-width="1"/>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="security-group" data-composition-frame-id="1" data-composition-frame-label="只读账户 · 不收私钥" x="900" y="654" width="364" height="118" rx="8" class="c-security-group" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="security-group" data-composition-frame-id="1" data-composition-frame-label="只读账户 · 不收私钥" x="968" y="654" width="228" height="122" rx="8" class="c-security-group" stroke-width="1"/>
 
         <!-- Connection paths (before components for correct z-order) -->
         <g data-graph-role="automatic-crossover" style="--step:0">
@@ -5283,20 +5283,16 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           <path data-edge-from="sentinel" data-edge-to="review" data-edge-label="建议卖出" data-edge-key="6" data-edge-id="sentinel-to-review" data-composition-points="1360,278;1174,278" data-composition-crossover="halo" data-composition-independent="true" d="M 1360 278 L 1174 278" class="a-default" data-animate="edge" style="--step:6" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         </g>
         <g data-graph-role="automatic-crossover" style="--step:7">
-          <path data-graph-role="automatic-crossover-underlay" d="M 1054 540 L 1054 680" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
-          <path data-edge-from="runner" data-edge-to="acctA" data-edge-label="复核" data-edge-key="7" data-edge-id="runner-to-acctA" data-composition-points="1054,540;1054,680" data-composition-crossover="halo" data-composition-independent="true" d="M 1054 540 L 1054 680" class="a-default" data-animate="edge" style="--step:7" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+          <path data-graph-role="automatic-crossover-underlay" d="M 1082 540 L 1082 680" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="runner" data-edge-to="accounts" data-edge-label="按账户复核" data-edge-key="7" data-edge-id="runner-to-accounts" data-composition-points="1082,540;1082,680" data-composition-crossover="halo" data-composition-independent="true" d="M 1082 540 L 1082 680" class="a-default" data-animate="edge" style="--step:7" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         </g>
         <g data-graph-role="automatic-crossover" style="--step:8">
-          <path data-graph-role="automatic-crossover-underlay" d="M 1110 540 L 1110 680" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
-          <path data-edge-from="runner" data-edge-to="acctB" data-edge-label="复核" data-edge-key="8" data-edge-id="runner-to-acctB" data-composition-points="1110,540;1110,680" data-composition-crossover="halo" data-composition-independent="true" d="M 1110 540 L 1110 680" class="a-default" data-animate="edge" style="--step:8" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+          <path data-graph-role="automatic-crossover-underlay" d="M 1082 238 L 1082 212 Q 1082 204 1074 204 L 397 204 Q 389 204 389 212 L 389 228" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="review" data-edge-to="steward" data-edge-label="否决上交" data-edge-key="8" data-edge-id="review-to-steward" data-composition-points="1082,238;1082,204;389,204;389,228" data-composition-crossover="halo" data-composition-independent="true" d="M 1082 238 L 1082 212 Q 1082 204 1074 204 L 397 204 Q 389 204 389 212 L 389 228" class="a-security" data-animate="edge" style="--step:8" stroke-width="1.5" marker-end="url(#arrowhead-security)"/>
         </g>
         <g data-graph-role="automatic-crossover" style="--step:9">
-          <path data-graph-role="automatic-crossover-underlay" d="M 1082 238 L 1082 212 Q 1082 204 1074 204 L 397 204 Q 389 204 389 212 L 389 228" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
-          <path data-edge-from="review" data-edge-to="steward" data-edge-label="否决上交" data-edge-key="9" data-edge-id="review-to-steward" data-composition-points="1082,238;1082,204;389,204;389,228" data-composition-crossover="halo" data-composition-independent="true" d="M 1082 238 L 1082 212 Q 1082 204 1074 204 L 397 204 Q 389 204 389 212 L 389 228" class="a-security" data-animate="edge" style="--step:9" stroke-width="1.5" marker-end="url(#arrowhead-security)"/>
-        </g>
-        <g data-graph-role="automatic-crossover" style="--step:10">
           <path data-graph-role="automatic-crossover-underlay" d="M 990 500 L 383 500 Q 375 500 375 492 L 375 328" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
-          <path data-edge-from="runner" data-edge-to="steward" data-edge-label="超限上交" data-edge-key="10" data-edge-id="runner-to-steward" data-composition-points="990,500;375,500;375,328" data-composition-crossover="halo" data-composition-independent="true" d="M 990 500 L 383 500 Q 375 500 375 492 L 375 328" class="a-security" data-animate="edge" style="--step:10" stroke-width="1.5" marker-end="url(#arrowhead-security)"/>
+          <path data-edge-from="runner" data-edge-to="steward" data-edge-label="超限上交" data-edge-key="9" data-edge-id="runner-to-steward" data-composition-points="990,500;375,500;375,328" data-composition-crossover="halo" data-composition-independent="true" d="M 990 500 L 383 500 Q 375 500 375 492 L 375 328" class="a-security" data-animate="edge" style="--step:9" stroke-width="1.5" marker-end="url(#arrowhead-security)"/>
         </g>
 
         <!-- Components -->
@@ -5392,28 +5388,16 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <text data-detail="context" x="1082" y="514" class="t-muted" font-size="9" text-anchor="middle">唯一执刀</text>
         </g>
 
-        <g id="node-acctA" data-node-id="acctA" data-node-label="账户1" tabindex="0" role="button" aria-label="聚焦账户1，只读复核, 专岗流水线 › 只读账户 · 不收私钥" aria-pressed="false" data-node-kind="security" data-node-sublabel="只读复核" data-node-context="专岗流水线 › 只读账户 · 不收私钥">
-          <title>账户1 · 只读复核 · 专岗流水线 › 只读账户 · 不收私钥</title>
-          <rect x="914" y="680" width="156" height="72" rx="8" class="c-mask"/>
-          <rect x="914" y="680" width="156" height="72" rx="8" class="c-security" data-animate="node" style="--step:8" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(920 686) scale(0.6875)">
+        <g id="node-accounts" data-node-id="accounts" data-node-label="账户" tabindex="0" role="button" aria-label="聚焦账户，每个账户一只, 专岗流水线 › 只读账户 · 不收私钥" aria-pressed="false" data-node-kind="security" data-node-sublabel="每个账户一只" data-node-context="专岗流水线 › 只读账户 · 不收私钥">
+          <title>账户 · 每个账户一只 · 专岗流水线 › 只读账户 · 不收私钥</title>
+          <rect x="982" y="680" width="200" height="76" rx="8" class="c-mask"/>
+          <rect x="982" y="680" width="200" height="76" rx="8" class="c-security" data-animate="node" style="--step:8" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(988 686) scale(0.6875)">
             <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
             <path d="m5.8 8 1.5 1.5 3-3"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="992" y="714" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">账户1</text>
-        <text data-detail="context" x="992" y="730" class="t-muted" font-size="9" text-anchor="middle">只读复核</text>
-        </g>
-
-        <g id="node-acctB" data-node-id="acctB" data-node-label="账户2" tabindex="0" role="button" aria-label="聚焦账户2，只读复核, 专岗流水线 › 只读账户 · 不收私钥" aria-pressed="false" data-node-kind="security" data-node-sublabel="只读复核" data-node-context="专岗流水线 › 只读账户 · 不收私钥">
-          <title>账户2 · 只读复核 · 专岗流水线 › 只读账户 · 不收私钥</title>
-          <rect x="1094" y="680" width="156" height="72" rx="8" class="c-mask"/>
-          <rect x="1094" y="680" width="156" height="72" rx="8" class="c-security" data-animate="node" style="--step:9" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(1100 686) scale(0.6875)">
-            <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
-            <path d="m5.8 8 1.5 1.5 3-3"/>
-          </g>
-          <text data-node-label="" data-detail-anchor="" x="1172" y="714" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">账户2</text>
-        <text data-detail="context" x="1172" y="730" class="t-muted" font-size="9" text-anchor="middle">只读复核</text>
+          <text data-node-label="" data-detail-anchor="" x="1082" y="716" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">账户</text>
+        <text data-detail="context" x="1082" y="732" class="t-muted" font-size="9" text-anchor="middle">每个账户一只</text>
         </g>
 
         <!-- Connection labels -->
@@ -5445,19 +5429,15 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           <rect x="1242.8" y="258" width="48.4" height="14" rx="3" class="c-mask"/>
           <text x="1267" y="268" class="t-edge-default" font-size="8" text-anchor="middle">建议卖出</text>
         </g>
-        <g data-detail="context" data-edge-from="runner" data-edge-to="acctA" data-edge-label="复核" data-edge-key="7" data-edge-id="runner-to-acctA">
-          <rect x="1018" y="603" width="30" height="14" rx="3" class="c-mask"/>
-          <text x="1033" y="613" class="t-edge-default" font-size="8" text-anchor="middle">复核</text>
+        <g data-detail="context" data-edge-from="runner" data-edge-to="accounts" data-edge-label="按账户复核" data-edge-key="7" data-edge-id="runner-to-accounts">
+          <rect x="1018" y="603" width="58" height="14" rx="3" class="c-mask"/>
+          <text x="1047" y="613" class="t-edge-default" font-size="8" text-anchor="middle">按账户复核</text>
         </g>
-        <g data-detail="context" data-edge-from="runner" data-edge-to="acctB" data-edge-label="复核" data-edge-key="8" data-edge-id="runner-to-acctB">
-          <rect x="1074" y="603" width="30" height="14" rx="3" class="c-mask"/>
-          <text x="1089" y="613" class="t-edge-default" font-size="8" text-anchor="middle">复核</text>
-        </g>
-        <g data-detail="context" data-edge-from="review" data-edge-to="steward" data-edge-label="否决上交" data-edge-key="9" data-edge-id="review-to-steward">
+        <g data-detail="context" data-edge-from="review" data-edge-to="steward" data-edge-label="否决上交" data-edge-key="8" data-edge-id="review-to-steward">
           <rect x="711.3" y="184" width="48.4" height="14" rx="3" class="c-mask"/>
           <text x="735.5" y="194" class="t-edge-security" font-size="8" text-anchor="middle">否决上交</text>
         </g>
-        <g data-detail="context" data-edge-from="runner" data-edge-to="steward" data-edge-label="超限上交" data-edge-key="10" data-edge-id="runner-to-steward">
+        <g data-detail="context" data-edge-from="runner" data-edge-to="steward" data-edge-label="超限上交" data-edge-key="9" data-edge-id="runner-to-steward">
           <rect x="350.8" y="394" width="48.4" height="14" rx="3" class="c-mask"/>
           <text x="375" y="404" class="t-edge-security" font-size="8" text-anchor="middle">超限上交</text>
         </g>
@@ -5469,32 +5449,32 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         </g>
 
         <g data-graph-role="structural-frame-label" data-composition-frame-id="1" data-composition-frame-kind="security-group" data-composition-frame-label="只读账户 · 不收私钥">
-          <rect data-graph-role="structural-frame-label-mask" x="904" y="658" width="127.23614043225807" height="18" rx="3" class="c-mask"/>
-          <text data-boundary-label="" x="908" y="672.2838719677419" class="t-security" font-size="10.283871967741936" font-weight="600">只读账户 · 不收私钥</text>
+          <rect data-graph-role="structural-frame-label-mask" x="972" y="658" width="127.23614043225807" height="18" rx="3" class="c-mask"/>
+          <text data-boundary-label="" x="976" y="672.2838719677419" class="t-security" font-size="10.283871967741936" font-weight="600">只读账户 · 不收私钥</text>
         </g>
 
         <!-- Legend -->
         <g data-legend="" data-legend-bridge="">
-          <text x="40" y="804" class="t-primary" font-size="12" font-weight="650">图例</text>
-          <g data-legend-semantic-kind="backend" data-legend-kind="backend" data-legend-label="后端" data-legend-x="40" data-legend-baseline="824" data-legend-width="68">
-            <rect x="40" y="815" width="16" height="10" rx="2.5" class="c-backend" stroke-width="1"/>
-            <text x="62" y="824" class="t-muted" font-size="10" font-weight="500">后端</text>
+          <text x="40" y="808" class="t-primary" font-size="12" font-weight="650">图例</text>
+          <g data-legend-semantic-kind="backend" data-legend-kind="backend" data-legend-label="后端" data-legend-x="40" data-legend-baseline="828" data-legend-width="68">
+            <rect x="40" y="819" width="16" height="10" rx="2.5" class="c-backend" stroke-width="1"/>
+            <text x="62" y="828" class="t-muted" font-size="10" font-weight="500">后端</text>
           </g>
-          <g data-legend-semantic-kind="database" data-legend-kind="database" data-legend-label="数据库" data-legend-x="130" data-legend-baseline="824" data-legend-width="81">
-            <rect x="130" y="815" width="16" height="10" rx="2.5" class="c-database" stroke-width="1"/>
-            <text x="152" y="824" class="t-muted" font-size="10" font-weight="500">数据库</text>
+          <g data-legend-semantic-kind="database" data-legend-kind="database" data-legend-label="数据库" data-legend-x="130" data-legend-baseline="828" data-legend-width="81">
+            <rect x="130" y="819" width="16" height="10" rx="2.5" class="c-database" stroke-width="1"/>
+            <text x="152" y="828" class="t-muted" font-size="10" font-weight="500">数据库</text>
           </g>
-          <g data-legend-semantic-kind="security" data-legend-kind="security" data-legend-label="安全" data-legend-x="233" data-legend-baseline="824" data-legend-width="68">
-            <rect x="233" y="815" width="16" height="10" rx="2.5" class="c-security" stroke-width="1"/>
-            <text x="255" y="824" class="t-muted" font-size="10" font-weight="500">安全</text>
+          <g data-legend-semantic-kind="security" data-legend-kind="security" data-legend-label="安全" data-legend-x="233" data-legend-baseline="828" data-legend-width="68">
+            <rect x="233" y="819" width="16" height="10" rx="2.5" class="c-security" stroke-width="1"/>
+            <text x="255" y="828" class="t-muted" font-size="10" font-weight="500">安全</text>
           </g>
-          <g data-legend-semantic-kind="messagebus" data-legend-kind="messagebus" data-legend-label="消息总线" data-legend-x="323" data-legend-baseline="824" data-legend-width="93">
-            <rect x="323" y="815" width="16" height="10" rx="2.5" class="c-messagebus" stroke-width="1"/>
-            <text x="345" y="824" class="t-muted" font-size="10" font-weight="500">消息总线</text>
+          <g data-legend-semantic-kind="messagebus" data-legend-kind="messagebus" data-legend-label="消息总线" data-legend-x="323" data-legend-baseline="828" data-legend-width="93">
+            <rect x="323" y="819" width="16" height="10" rx="2.5" class="c-messagebus" stroke-width="1"/>
+            <text x="345" y="828" class="t-muted" font-size="10" font-weight="500">消息总线</text>
           </g>
-          <g data-legend-semantic-kind="external" data-legend-kind="external" data-legend-label="外部系统" data-legend-x="438" data-legend-baseline="824" data-legend-width="93">
-            <rect x="438" y="815" width="16" height="10" rx="2.5" class="c-external" stroke-width="1"/>
-            <text x="460" y="824" class="t-muted" font-size="10" font-weight="500">外部系统</text>
+          <g data-legend-semantic-kind="external" data-legend-kind="external" data-legend-label="外部系统" data-legend-x="438" data-legend-baseline="828" data-legend-width="93">
+            <rect x="438" y="819" width="16" height="10" rx="2.5" class="c-external" stroke-width="1"/>
+            <text x="460" y="828" class="t-muted" font-size="10" font-weight="500">外部系统</text>
           </g>
         </g>
       </svg>
@@ -5694,7 +5674,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <ul>
           <li>研究只有可参与、暂不参与、信息不足</li>
           <li>可参与才进入执行</li>
-          <li>步骤包标明账户1、账户2或双开</li>
+          <li>步骤包写明参与账户</li>
         </ul>
       </div>
 

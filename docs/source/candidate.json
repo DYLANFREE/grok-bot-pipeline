@@ -81,35 +81,26 @@
       "size": [184, 80]
     },
     {
-      "id": "acctA",
+      "id": "accounts",
       "type": "security",
       "icon": "security",
-      "label": "账户1",
-      "sublabel": "只读复核",
-      "pos": [914, 680],
-      "size": [156, 72]
-    },
-    {
-      "id": "acctB",
-      "type": "security",
-      "icon": "security",
-      "label": "账户2",
-      "sublabel": "只读复核",
-      "pos": [1094, 680],
-      "size": [156, 72]
+      "label": "账户",
+      "sublabel": "每个账户一只",
+      "pos": [982, 680],
+      "size": [200, 76]
     }
   ],
   "boundaries": [
     {
       "kind": "region",
       "label": "专岗流水线",
-      "wraps": ["scout", "review", "runner", "sentinel", "acctA", "acctB"],
+      "wraps": ["scout", "review", "runner", "sentinel", "accounts"],
       "pad": 26
     },
     {
       "kind": "security-group",
       "label": "只读账户 · 不收私钥",
-      "wraps": ["acctA", "acctB"],
+      "wraps": ["accounts"],
       "pad": 14
     }
   ],
@@ -168,18 +159,10 @@
       "toSide": "right"
     },
     {
-      "id": "runner-to-acctA",
+      "id": "runner-to-accounts",
       "from": "runner",
-      "to": "acctA",
-      "label": "复核",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "runner-to-acctB",
-      "from": "runner",
-      "to": "acctB",
-      "label": "复核",
+      "to": "accounts",
+      "label": "按账户复核",
       "fromSide": "bottom",
       "toSide": "top"
     },
@@ -218,7 +201,7 @@
       "items": [
         "研究只有可参与、暂不参与、信息不足",
         "可参与才进入执行",
-        "步骤包标明账户1、账户2或双开"
+        "步骤包写明参与账户"
       ]
     },
     {
